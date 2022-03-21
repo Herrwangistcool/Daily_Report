@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/history/history"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Daily Report",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "icon/all.png",
+      "selectedIconPath": "icon/all-fill.png"
+    },{
+      "pagePath": "pages/history/history",
+      "text": "记录",
+      "iconPath": "icon/integral.png",
+      "selectedIconPath": "icon/integral-fill.png"
+    },{
+      "pagePath": "pages/user/user",
+      "text": "设置",
+      "iconPath": "icon/bussiness-man.png",
+      "selectedIconPath": "icon/bussiness-man-fill.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
