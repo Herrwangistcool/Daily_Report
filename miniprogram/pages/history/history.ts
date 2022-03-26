@@ -11,7 +11,7 @@ Page({
             ID: 2021144301,
             name: "Daniel",
             Institute: "Software Engineer",
-            isChecked: false
+            isChecked: true
         }
     },
 
