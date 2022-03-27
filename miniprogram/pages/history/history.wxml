@@ -72,6 +72,12 @@
             wx:elif
             wx:else
         在标签上直接加入属性 hidden
+        什么场景下用哪个
+            当标签不是频繁的切换显示 优先使用wx:if
+                直接把标签从页面结构中移除
+            当标签频繁的切换显示的时候 优先使用hidden
+                通过添加样式的方式来切换显示
+                不要跟display属性一起使用，会被覆盖
  -->
 <view>
   <view>条件渲染</view>
@@ -81,6 +87,7 @@
   <view wx:elif="{{false}}">2</view>
   <view wx:else>3</view>
   <view>----------------</view>
-  <view>hidden</view>
+  <view hidden>hidden</view>
+  <view hidden="{{false}}">hidden2</view>
 </view>
 
