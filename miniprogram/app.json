@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/demo/demo",
     "pages/index/index",
     "pages/logs/logs",
     "pages/user/user",
-    "pages/history/history",
-    "pages/history/event"
+    "pages/history/history"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -14,7 +14,7 @@
   },
   "tabBar": {
     "list": [{
-      "pagePath": "pages/index/index",
+      "pagePath": "pages/demo/demo",
       "text": "首页",
       "iconPath": "icon/all.png",
       "selectedIconPath": "icon/all-fill.png"

@@ -1,0 +1,49 @@
+<!--pages/demo/demo.wxml-->
+<input
+  type="text"
+  bindinput="handleInput"
+  class="demoInput"
+/>
+<!-- 
+    加入点击事件
+    1.bindtap
+    2.无法在小程序当中的事件中直接传参
+    3.通过自定义属性的方式传参
+ -->
+<button bindtap="handleTap" data-operation="{{1}}">+</button>
+<button bindtap="handleTap" data-operation="{{-1}}">-</button>
+<view hover-class="h-class">
+  {{num}}
+</view>
+<!-- 
+    1.长按文字复制 user-select
+    2.对文本内容进行解码
+ -->
+<text user-select="{{true}}" decode="{{true}}">
+    文本可显示
+    &nbsp;
+    123
+</text>
+<view>
+  <image
+    src="https://img.zcool.cn/community/0130365a012306a801216a4bc40484.png@1280w_1l_2o_100sh.png"
+    mode="aspectFit"
+    lazy-load="{{true}}"
+  />
+</view>
+<!-- 
+  轮播图外层容器swiper
+  每一个轮播项 swiper-item
+ -->
+<swiper>
+  <swiper-item>
+    <image src="https://hovertree.com/texiao/jqimg/3/images/stuimg3_1.png" mode="aspectFill" />
+  </swiper-item>
+  <swiper-item>
+    <image src="https://tse4-mm.cn.bing.net/th/id/OIP-C.rFwQEBFH2gllUuesvvDGOwHaDa?pid=ImgDet&rs=1" mode="aspectFill" />
+  </swiper-item>
+  <swiper-item>
+    <image src="https://d.yysucai.com/uploads/allimg/141106/1-141106191Q4P3.png" mode="aspectFill" />
+  </swiper-item>
+</swiper>
+

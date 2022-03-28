@@ -1,13 +1,23 @@
-// pages/history/event.ts
+// pages/demo/demo.ts
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        num:0 
     },
-
+    handleInput(e){
+        this.setData({
+            num: parseInt(e.detail.value)
+        })
+    },
+    handleTap(e){
+        const operation=e.currentTarget.dataset.operation;
+        this.setData({
+            num:this.data.num+operation
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
