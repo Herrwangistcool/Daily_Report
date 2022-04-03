@@ -1,66 +1,36 @@
 // pages/user/user.ts
 Page({
-
-    /**
-     * 页面的初始数据
-     */
-    data: {
+    onLoad(){
 
     },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad() {
-
+    add(){
+        wx.cloud.database().collection('goods')
+            .add({
+                data:{
+                    name: 'watermelon',
+                    price: 18
+                }
+            })
+            .then(res=>{
+                console.log('添加成功', res)
+            })
+            .catch(res=>{
+                console.error('添加失败', res)
+            })
     },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload() {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
+    update(){
+        wx.cloud.database().collection('goods')
+            .doc("636050766249637c03bc21862383b4dd")
+            .update({
+                data:{
+                    price:11
+                }
+            })
+            .then(res=>{
+                console.log('修改成功',res)
+            })
+            .catch(res=>{
+                console.error('修改失败',res)
+            })
     }
 })

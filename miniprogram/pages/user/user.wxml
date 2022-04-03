@@ -1,2 +1,3 @@
 <!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<button bindtap="add">增加记录</button>
+<button bindtap="update">更新记录</button>

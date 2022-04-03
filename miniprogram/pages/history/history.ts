@@ -5,24 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        msg:"上报纪录",
-        isReprted:false,
-        person:{
-            ID: 2021144301,
-            name: "Daniel",
-            Institute: "Software Engineer",
-            isChecked: true
-        },
-        list:[{
-            id: 0,
-            name: "Tailor"
-        },{
-            id: 1,
-            name: "Swift"
-        },{
-            id: 2,
-            name: "Newton"
-        }]
+        
     },
 
     /**
