@@ -5,8 +5,15 @@ Page({
         path: '/pages/demo/demo'
       }
     },
-  
+    onLoad(){
+        wx.cloud.init()
+    },
+    
     data: {
+      userName:"",
+      userID:"",
+      gender:"",
+      userDepartment:"",
       isChecked: false,
       pickerHidden: true,
       chosen: ''
@@ -39,6 +46,15 @@ Page({
     },
   
     formSubmit(e) {
+      const db = wx.cloud.database();
+      db.collection('userInfo').add({
+          data:{
+              userName:e.detail.value.userName,
+              userID:e.detail.value.userID,
+              gender:e.detail.value.gender,
+              userDepartment:e.detail.value.userDepartment
+          }
+      })
       console.log('form发生了submit事件，携带数据为：', e.detail.value)
     },
   
