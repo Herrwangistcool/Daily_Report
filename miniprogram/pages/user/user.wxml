@@ -1,3 +1,5 @@
 <!--pages/user/user.wxml-->
 <button bindtap="add">增加记录</button>
 <button bindtap="update">更新记录</button>
+<button bindtap="search">查找记录</button>
+<button bindtap="delete">删除记录</button>

@@ -1,72 +1,58 @@
-<!--pages/demo/demo.wxml-->
-<input
-  type="text"
-  bindinput="handleInput"
-  class="demoInput"
-/>
-<!-- 
-    加入点击事件
-    1.bindtap
-    2.无法在小程序当中的事件中直接传参
-    3.通过自定义属性的方式传参
- -->
-<button bindtap="handleTap" data-operation="{{1}}">+</button>
-<button bindtap="handleTap" data-operation="{{-1}}">-</button>
-<view hover-class="h-class">
-  {{num}}
+<view class="container">
+  <view class="page-body">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+      <view class="page-section">
+        <view class="page-section-title">姓名</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd" style="margin: 30rpx 0" >
+              <input class="weui-input" name="userName" placeholder="这是一个输入框" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="page-section">
+        <view class="page-section-title">工号</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd" style="margin: 30rpx 0" >
+              <input class="weui-input" name="userID" placeholder="这是一个输入框" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">性别</view>
+        <radio-group name="gender">
+          <label><radio value="male"/>男</label>
+          <label><radio value="female"/>女</label>
+        </radio-group>
+      </view>
+
+      <view class="page-section">
+        <view class="page-section-title">所在部门</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd" style="margin: 30rpx 0" >
+              <input class="weui-input" name="userDepartment" placeholder="这是一个输入框" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="page-section page-section-gap">
+        <text>本人保证以上数据真实性</text>
+        <switch name="switch" checked="{{isChecked}}" bindchange="confirm"/>
+      </view>
+
+      <view class="btn-area">
+        <button style="margin: 30rpx 0" type="primary" formType="submit" wx:if="{{isChecked}}">Submit</button>
+        <button style="margin: 30rpx 0" formType="reset">Reset</button>
+      </view>
+    </form>
+  </view>
+
 </view>
-<!-- 
-    1.长按文字复制 user-select
-    2.对文本内容进行解码
- -->
-<text user-select="{{true}}" decode="{{true}}">
-    文本可显示
-    &nbsp;
-    123
-</text>
-<view>
-  <image
-    src="https://img.zcool.cn/community/0130365a012306a801216a4bc40484.png@1280w_1l_2o_100sh.png"
-    mode="aspectFit"
-    lazy-load="{{true}}"
-  />
-</view>
-<!-- 
-  轮播图外层容器swiper
-  每一个轮播项 swiper-item
-  swiper标签存在默认样式
-    width 100%
-    height 150px
-    swiper高度无法实现由内容撑开
-  先找出来原图的宽度和高度 等比例给swiper定宽度和高度
-    原图的宽度和高度 2000*861 px
-    swiper宽度/swiper高度=原图的宽/原图的高度
-    swiper高度=swiper宽度*原图的高度/原图的宽度
-    height: 100vw*861/2000
- -->
-<swiper
-  autoplay="{{true}}"
-  circular="{{true}}"
-  indicator-dots="{{true}}"
->
-  <swiper-item>
-    <image
-      mode="widthFix"
-      src="https://hovertree.com/texiao/jqimg/3/images/stuimg3_1.png"
-      mode="aspectFill"
-    />
-  </swiper-item>
-  <swiper-item>
-    <image
-      mode="widthFix"
-      src="https://tse4-mm.cn.bing.net/th/id/OIP-C.rFwQEBFH2gllUuesvvDGOwHaDa?pid=ImgDet&rs=1"
-      mode="aspectFill"
-    />
-  </swiper-item>
-</swiper>
-<!-- 
-  open-type
-    navigate 保留当前页面，跳转到应用内某个页面
- -->
-<navigator url="/pages/index/index">跳转</navigator>
 

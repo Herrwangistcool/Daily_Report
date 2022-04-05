@@ -1,5 +1,18 @@
 /* pages/demo/demo.wxss */
 @import "../../app.wxss";
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50rpx 100rpx;
+    box-sizing: border-box;
+  } 
+.weui-input{
+    border: 1rpx solid antiquewhite;
+    height: 80rpx;
+}
 image{
     box-sizing:border-box;
     border: 1px solid red;

@@ -1,8 +1,9 @@
 // pages/user/user.ts
 Page({
     onLoad(){
-
+        wx.cloud.init()
     },
+
     add(){
         wx.cloud.database().collection('goods')
             .add({
@@ -31,6 +32,26 @@ Page({
             })
             .catch(res=>{
                 console.error('修改失败',res)
+            })
+    },
+    search(){
+        wx.cloud.database().collection('goods')
+            .where({
+                price: 8
+            })
+            .get({
+                success:function(res){
+                    console.log(res.data)
+                }
+            })
+    },
+    delete(){
+        wx.cloud.database().collection('goods')
+            .doc("636050766249637c03bc21862383b4dd")
+            .remove({
+                success:function(res){
+                    console.log(res.data)
+                }
             })
     }
 })
