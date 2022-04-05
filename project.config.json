@@ -5,7 +5,7 @@
     },
     "miniprogramRoot": "miniprogram/",
     "compileType": "miniprogram",
-    "projectname": "daily_report",
+    "projectname": "Daily_Report",
     "setting": {
         "urlCheck": true,
         "es6": true,
@@ -33,7 +33,7 @@
             "disablePlugins": [],
             "outputPath": ""
         },
-        "useIsolateContext": true,
+        "useIsolateContext": false,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": false,
         "packNpmRelationList": [],
@@ -48,6 +48,6 @@
     },
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
-    "appid": "wx4ff9c9a1e504467e",
+    "appid": "wxe6f71d987cb5bad7",
     "condition": {}
 }

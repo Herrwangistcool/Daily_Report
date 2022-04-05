@@ -1,9 +1,2 @@
-<!--pages/history/history.wxml-->
-<view>{{msg}}</view>
-<view>今日是否已上报：{{isReprted}}</view>
-<view>{{person.name}}</view>
-<view data-num="{{person.ID}}">自定义属性</view>
-<view>{{person.Institute}}</view>
-<view>
-    <checkbox checked="{{person.isChecked}}"></checkbox>
-</view>
+
+
