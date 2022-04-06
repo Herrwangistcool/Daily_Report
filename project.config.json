@@ -3,7 +3,7 @@
     "packOptions": {
         "ignore": []
     },
-    "miniprogramRoot": "miniprogram/",
+    "miniprogramRoot": "/miniprogram",
     "compileType": "miniprogram",
     "projectname": "Daily_Report",
     "setting": {
