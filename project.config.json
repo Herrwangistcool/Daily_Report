@@ -49,5 +49,7 @@
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
     "appid": "wxe6f71d987cb5bad7",
+    "cloudfunctionRoot": "miniprogram/",
+    "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
     "condition": {}
 }

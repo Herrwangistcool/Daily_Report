@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/user/user",
     "pages/history/history",
-    "pages/demo/demo"
+    "pages/demo/demo",
+    "pages/QRcode/QRcode"
   ],
   "window": {
     "backgroundTextStyle": "light",
