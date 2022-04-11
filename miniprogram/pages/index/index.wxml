@@ -1,6 +1,40 @@
-<button>
-    <navigator url="/pages/demo/demo">基本信息填报</navigator>
-</button>
-<button>
-    <navigator url="/pages/QRcode/QRcode">生成二维码</navigator>
-</button>
+<view class="form">
+    <view class="item">姓名: {{userName}}</view>
+    <view class="item">工号: {{userID}}</view>
+    <view class="item">性别: {{gender}}</view>
+    <view class="item">今日是否已填报: {{isSubmitted}}</view>
+    <button id="b1">
+        <navigator url="/pages/demo/demo">基本信息填报</navigator>
+    </button>
+    <button id="b2">
+        <navigator url="/pages/QRcode/QRcode">生成二维码</navigator>
+    </button>
+    <button id="b3">
+        <navigator>入校申请</navigator>
+    </button>
+    <form>
+        <view class="section_title">健康状况</view>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="picker">
+                    {{array[index]}}
+                </view>
+            </picker>
+        <view class="section_title">体温</view>
+            <slider name="slider" show-value min="25" max="50" step="0.1"></slider>
+        <view class="section_title">同住家人健康情况</view>
+            <picker value="{{index}}" range="{{array}}">
+                <view class="picker">
+                    {{array[index]}}
+                </view>
+            </picker>
+        <view class="section_title">健康码是否为绿色，行程码是否异常</view>
+            <checkbox-group name="checkbox" style="margin-left:20px; margin-bottom: 10px; margin-top: 10px;">
+                <label><checkbox value="h_Code_status" />健康码为绿色</label>
+                <label><checkbox value="t_Code_status" />行程码正常</label>
+            </checkbox-group>
+        <view class="btn-area">
+            <button style="margin: 30rpx 0" type="primary" formType="submit">提交</button>
+            <button style="margin: 30rpx 0" formType="reset">重置</button>
+        </view>
+    </form>
+</view>
