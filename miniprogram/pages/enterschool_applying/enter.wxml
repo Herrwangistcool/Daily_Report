@@ -1,12 +1,21 @@
- <view class="page-section page-section-gap">
-        <view class="page-section-title">是否返校</view>
-        <radio-group bindchange="radiochange">
-          <label><radio value="yes"  name="是"/>是</label>
-          <label><radio value="no"  name="否"/>否</label>
-        </radio-group>
-      </view>
-<button bindtap="moveToLocation" data-name="mapName">定位</button>
-<text>{{mapName}}</text>
-<view class="btn-area">
-   <button style="margin:20px 50px 20px" formType="reset" bindtap="submit">提交</button>
-</view>
+<form catchsubmit="formSubmit" catchreset="formReset">
+  <view class="page-section page-section-gap"></view>
+  <view>
+    <text>是否返校</text>
+    <radio-group bindchange="radiochange" name='isEnter'>
+      <label><radio value="yes" />是</label>
+      <label><radio value="no"  />否</label>
+    </radio-group>
+  </view>
+
+  <view>
+    <input placeholder="{{mapName}}" />
+    <button bindtap="moveToLocation" data-name="mapName">定位</button>
+  </view>
+
+  <view>
+    <button style="margin:20px 50px 20px" formType="submit">提交</button>
+  </view>
+</form>
+        
+

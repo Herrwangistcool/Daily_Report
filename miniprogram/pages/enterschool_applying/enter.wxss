@@ -1,1 +1,12 @@
 /* pages/enterschool_applying/enter.wxss */
+input{
+    border: 1px solid slategrey;
+    width: 500rpx;
+}
+view{
+    margin-left: 40rpx;
+    margin-bottom: 20rpx;
+}
+button{
+    
+}

@@ -10,7 +10,7 @@
         <navigator url="/pages/QRcode/QRcode">生成二维码</navigator>
     </button>
     <button id="b3">
-        <navigator>入校申请</navigator>
+        <navigator url="/pages/enterschool_applying/enter">入校申请</navigator>
     </button>
     <form>
         <view class="section_title">健康状况</view>
