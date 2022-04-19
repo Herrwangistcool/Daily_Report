@@ -1,0 +1,36 @@
+.form{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.item{
+    padding-left: 20px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
+#b1{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+#b2{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+#b3{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.btn-area{
+    margin-left: 20px;
+}
+.enter{
+    color: 1px antiquewhite;
+}
+.picker{
+    padding: 10px;
+    margin: 10px 20px;
+    background-color: antiquewhite;
+}
+.section_title{
+    margin-left: 20px;
+}

@@ -1,0 +1,21 @@
+<form catchsubmit="formSubmit" catchreset="formReset">
+  <view class="page-section page-section-gap"></view>
+  <view>
+    <text>是否返校</text>
+    <radio-group bindchange="radiochange" name='isEnter'>
+      <label><radio value="yes" />是</label>
+      <label><radio value="no"  />否</label>
+    </radio-group>
+  </view>
+
+  <view>
+    <input placeholder="{{mapName}}" />
+    <button bindtap="moveToLocation" data-name="mapName">定位</button>
+  </view>
+
+  <view>
+    <button style="margin:20px 50px 20px" formType="submit">提交</button>
+  </view>
+</form>
+        
+

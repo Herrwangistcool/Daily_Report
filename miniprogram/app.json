@@ -4,8 +4,15 @@
     "pages/logs/logs",
     "pages/user/user",
     "pages/history/history",
-    "pages/demo/demo"
+    "pages/demo/demo",
+    "pages/QRcode/QRcode",
+    "pages/enterschool_applying/enter"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
@@ -30,6 +37,7 @@
       "selectedIconPath": "icon/bussiness-man-fill.png"
     }]
   },
+
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

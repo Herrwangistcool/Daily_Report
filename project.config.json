@@ -3,7 +3,7 @@
     "packOptions": {
         "ignore": []
     },
-    "miniprogramRoot": "miniprogram/",
+    "miniprogramRoot": "/miniprogram",
     "compileType": "miniprogram",
     "projectname": "Daily_Report",
     "setting": {
@@ -49,5 +49,7 @@
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
     "appid": "wxe6f71d987cb5bad7",
+    "cloudfunctionRoot": "miniprogram/getID",
+    "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
     "condition": {}
 }
