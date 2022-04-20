@@ -12,25 +12,25 @@
     <button id="b3">
         <navigator url="/pages/enterschool_applying/enter">入校申请</navigator>
     </button>
-    <form>
+    <form catchsubmit="formSubmit" catchreset="formReset">
         <view class="section_title">健康状况</view>
-            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <picker bindchange="bindPickerChange_s" value="{{index_s}}" range="{{array}}" name="self_h">
                 <view class="picker">
-                    {{array[index]}}
+                    {{array[index_s]}}
                 </view>
             </picker>
         <view class="section_title">体温</view>
-            <slider name="slider" show-value min="25" max="50" step="0.1"></slider>
+            <slider name="temperature" show-value min="25" max="50" step="0.1" value="36"></slider>
         <view class="section_title">同住家人健康情况</view>
-            <picker value="{{index}}" range="{{array}}">
+            <picker bindchange="bindPickerChange_f" value="{{index_f}}" range="{{array}}" name="family_h">
                 <view class="picker">
-                    {{array[index]}}
+                    {{array[index_f]}}
                 </view>
             </picker>
         <view class="section_title">健康码是否为绿色，行程码是否异常</view>
-            <checkbox-group name="checkbox" style="margin-left:20px; margin-bottom: 10px; margin-top: 10px;">
-                <label><checkbox value="h_Code_status" />健康码为绿色</label>
-                <label><checkbox value="t_Code_status" />行程码正常</label>
+            <checkbox-group name="code_status" style="margin-left:20px; margin-bottom: 10px; margin-top: 10px;">
+                <label><checkbox value="健康码正常" />健康码为绿色</label>
+                <label><checkbox value="行程码正常" />行程码正常</label>
             </checkbox-group>
         <view class="btn-area">
             <button style="margin: 30rpx 0" type="primary" formType="submit">提交</button>
